@@ -360,3 +360,29 @@ body {
     font-family: var(--font-body);
     font-size: 0.95rem;
     background-color: rgba(255,
+                           /* Custom Comments Styling */
+.comment-section {
+    margin-top: 32px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.comment-section .section-title {
+    margin-bottom: 8px;
+}
+
+/* Adjust Giscus Frame constraints */
+.giscus {
+    width: 100%;
+    margin-top: 16px;
+    min-height: 150px;
+}
+
+/* Smooth out the loading layout */
+.giscus-frame {
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
