@@ -1,0 +1,619 @@
+/* --- Premium Emerald Theme Setup --- */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f7f5; /* Light grey-green tinted background */
+    --text-main: #1c2d24; /* Dark deep slate forest green for readable text */
+    --text-muted: #53685c;
+    --accent: #1e5631; /* Premium suit emerald green */
+    --accent-hover: #143d22;
+    --accent-light: #e8f4ec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-primary);
+    line-height: 1.6;
+}
+
+/* --- Section Formatting Utilities --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* --- Navigation Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    background: rgba(255, 255, 255, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    margin: 0 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.btn-nav {
+    background: var(--accent);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+}
+
+.btn-nav:hover {
+    background: var(--accent-hover);
+}
+
+/* Colorful Brands Top Header Logics */
+.top-socials {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.top-socials a {
+    font-size: 1.5rem;
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.top-socials a:hover {
+    transform: scale(1.15);
+}
+
+.icon-fb { color: #1877F2; }
+.icon-insta {
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-tt { color: #000000; }
+
+/* --- 1. Hero Layout Match --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 8%;
+    background-color: var(--bg-secondary);
+    min-height: 85vh;
+}
+
+.hero-content {
+    flex: 1.2;
+    padding-right: 3rem;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 520px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 360px;
+    height: 440px; /* Slightly taller aspect ratio matching the portrait */
+    object-fit: cover;
+    border-radius: 16px; /* Modern curved edges instead of strict circle */
+    border: 6px solid white;
+    box-shadow: 0 15px 35px rgba(28, 45, 36, 0.15);
+}
+
+/* --- 2. About Section --- */
+.about-section {
+    padding: 5rem 8%;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.edu-card {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+}
+
+.edu-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.duration {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- 3. Single Unified 'My Work' Section --- */
+.portfolio-section {
+    padding: 5rem 8%;
+    background-color: var(--bg-secondary);
+}
+
+/* TikTok Block Optimization - Video Content Only (Cropped) */
+.tiktok-container {
+    max-width: 325px; /* Fits standard vertical video widths perfectly */
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.tiktok-container h3 {
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+}
+
+.tiktok-wrapper {
+    width: 100%;
+    height: 575px; /* Exact height to display only the video viewport box */
+    border-radius: 12px;
+    overflow: hidden; /* This acts as a scissor, cutting off everything outside the box */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    background: #000000;
+    position: relative;
+}
+
+/* Adjusts the placement of the internal TikTok player to hide header and footer items */
+.tiktok-wrapper iframe, 
+.tiktok-wrapper .tiktok-embed {
+    position: absolute;
+    width: 100% !important;
+    height: 760px !important; /* Makes the script tall enough so the text goes way below the viewport box */
+    top: -65px !important;    /* Shifts the player UP to hide the profile section text at the top */
+    left: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.work-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: 320px; /* Taller height slots for posters */
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.work-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(30, 86, 49, 0.15);
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 4. Skills Section --- */
+.skills-section {
+    padding: 5rem 8%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+
+
+footer {
+    text-align: center;
+    border-top: 1px solid #283e31;
+    padding-top: 2rem;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #799484;
+}
+
+/* --- Mobile Device Optimization --- */
+@media (max-width: 968px) {
+    header { flex-direction: column; gap: 1rem; padding: 1.5rem 5%; }
+    nav a { margin: 0 0.6rem; }
+    .top-socials { margin-top: 0.5rem; }
+    .hero { flex-direction: column; text-align: center; padding: 4rem 5%; }
+    .hero-content { padding-right: 0; margin-bottom: 3rem; }
+    .hero-content h1 { font-size: 2.6rem; }
+    .hero-image img { width: 280px; height: 340px; }
+    .about-container, .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+/* --- Portfolio Image Click Modal (Lightbox) --- */
+.work-item img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 35, 25, 0.95); /* Deep slate green background matching your contact theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Turns active via JS trigger */
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    max-width: 85%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.close-modal:hover {
+    color: #3bb765; /* Fades to light green accent color on hover */
+}
+
+@media (max-width: 768px) {
+    .close-modal {
+        top: 15px;
+        right: 25px;
+        font-size: 2.5rem;
+    }
+}
+/* --- Icon-Only Contact Info Section --- */
+.contact-info-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #1a2f23; /* Dark green tone matching the contact section background */
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
+}
+
+/* Color definitions for the logos */
+.icon-phone {
+    color: #3bb765; /* Bright emerald green matching your site accent */
+    border: 1px solid rgba(59, 183, 101, 0.3);
+}
+
+.icon-gmail {
+    color: #EA4335; /* Authentic Gmail Brand Red */
+    border: 1px solid rgba(234, 67, 53, 0.3);
+}
+
+/* Hover Animations */
+.contact-info-logos a:hover {
+    transform: scale(1.12);
+}
+
+.icon-phone:hover {
+    background-color: #3bb765;
+    color: #ffffff;
+}
+
+.icon-gmail:hover {
+    background-color: #EA4335;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .contact-info-logos {
+        gap: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .contact-info-logos a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
+/* --- Hero Action Buttons Layout --- */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.btn-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Clean rounded edges matching the modern feel */
+    background: #ffffff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(28, 45, 36, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
+}
+
+/* Color logic matching your main layout rules */
+.icon-phone-hero {
+    color: var(--accent);
+    border: 1px solid rgba(30, 86, 49, 0.2);
+}
+
+.icon-gmail-hero {
+    color: #EA4335; /* Premium Gmail red */
+    border: 1px solid rgba(234, 67, 53, 0.2);
+}
+
+/* Hover Transformations */
+.btn-hero-icon:hover {
+    transform: translateY(-2px);
+}
+
+.icon-phone-hero:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.icon-gmail-hero:hover {
+    background-color: #EA4335;
+    color: #ffffff;
+}
+
+/* Mobile Alignment Polish */
+@media (max-width: 768px) {
+    .hero-actions {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .btn-hero-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* --- Live Comment System Theme Formatting --- */
+.contact-section {
+    padding: 5rem 8% 3rem;
+    background-color: #122319; /* Deep dark suite forest green background */
+    color: white;
+}
+
+.comment-form-container {
+    max-width: 550px;
+    margin: 0 auto 3rem;
+    background: #1a2f23;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.comment-form-container .btn-primary {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Comments Board Display Output */
+.comments-display-board {
+    max-width: 550px;
+    margin: 0 auto 4rem;
+    text-align: left;
+}
+
+.comments-display-board h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #283e31;
+    padding-bottom: 0.5rem;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 450px; /* Adds clean scroll capability if you get lots of comments */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.comment-card {
+    background: #1a2f23;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #3bb765; /* Bright accent indicator tag */
+    animation: fadeInComment 0.4s ease;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.comment-author {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #799484;
+}
+
+.comment-content {
+    font-size: 0.9rem;
+    color: #e1e7e4;
+    word-break: break-word;
+}
+
+.no-comments {
+    text-align: center;
+    color: #799484;
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+/* Quick fade animation entry when comment updates */
+@keyframes fadeInComment {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
