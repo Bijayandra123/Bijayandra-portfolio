@@ -1,183 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bijayandra Bishwokarma | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bijayandra Bishwokarma — Video Editor & Designer</title>
+<meta name="description" content="Portfolio of Bijayandra Bishwokarma — video editing, graphic design & data management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">Bijayandra.</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">My Work</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact" class="btn-nav">Hire Me</a>
-        </nav>
-        <div class="top-socials">
-            <a href="https://www.facebook.com/bijayandra.bishwokarma" target="_blank" class="icon-fb"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bijayandra_2/" target="_blank" class="icon-insta"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@bijayandra.x__" target="_blank" class="icon-tt"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </header>
+<!-- Scroll progress "scrubber" -->
+<div class="scrubber" id="scrubber">
+  <div class="scrubber-track">
+    <div class="scrubber-fill" id="scrubberFill"></div>
+    <div class="scrubber-head" id="scrubberHead"></div>
+  </div>
+  <div class="scrubber-marks">
+    <a href="#about" class="mark" data-target="about"><span class="tc">00:01</span><span class="lb">About</span></a>
+    <a href="#portfolio" class="mark" data-target="portfolio"><span class="tc">00:02</span><span class="lb">Work</span></a>
+    <a href="#skills" class="mark" data-target="skills"><span class="tc">00:03</span><span class="lb">Skills</span></a>
+    <a href="#contact" class="mark" data-target="contact"><span class="tc">00:04</span><span class="lb">Contact</span></a>
+  </div>
+</div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Bijayandra</span>.</h1>
-            <p class="hero-sub">I bring stories to life through video editing, graphic design, and clean data.</p>
-            
-            <div class="hero-actions">
-                <a href="#portfolio" class="btn-primary">View My Work</a>
-                <a href="tel:+9779840035249" class="btn-hero-icon icon-phone-hero" title="Call Me">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-                <a href="mailto:bijayandra2@gmail.com" class="btn-hero-icon icon-gmail-hero" title="Email Me">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="pp.jpg.jpg" alt="Bijayandra Bishwokarma">
-        </div>
-    </section>
+<header id="siteHeader">
+  <div class="logo">Bijayandra<span class="dot">.</span></div>
 
-    <section id="about" class="about-section">
-        <div class="section-title">
-            <h2>About & Education</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="about-container">
-            <div class="bio">
-                <p>I’m a 19-year-old creator and tech enthusiast based in Nepal. I specialize in turning creative concepts into polished visual designs and managing digital workflows efficiently.</p>
-            </div>
-            <div class="education-grid">
-                <div class="edu-card">
-                    <h3>DAV College, Lalitpur</h3>
-                    <p class="duration">+2 Education</p>
-                </div>
-                <div class="edu-card">
-                    <h3>Nilkantha Secondary School</h3>
-                    <p class="duration">Completed SLC</p>
-                </div>
-                <div class="edu-card">
-                    <h3>Children Park Secondary School</h3>
-                    <p class="duration">Completed BLE</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 
-    <section id="portfolio" class="portfolio-section">
-        <div class="section-title">
-            <h2>My Work</h2>
-            <div class="underline"></div>
-        </div>
-        
-        <div class="tiktok-container">
-            <h3>Featured Video Content</h3>
-            <div class="tiktok-wrapper">
-                <blockquote class="tiktok-embed" 
-                            cite="https://www.tiktok.com/@bijayandra.x__/video/7660802922829057288" 
-                            data-video-id="7660802922829057288">
-                    <section></section>
-                </blockquote>
-            </div>
-        </div>
-        
-        <h3 class="gallery-title">Design & Photo Projects</h3>
-        <div class="work-grid">
-            <div class="work-item"><img src="hunterjpg.jpg" alt="Festive Poster Design 1"></div>
-            <div class="work-item"><img src="book.jpg.png" alt="Festive Poster Design 2"></div>
-            <div class="work-item"><img src="dashina.jpg" alt="Photoshop Photo Edit"></div>
-            <div class="work-item"><img src="gopal.jpg.jpg" alt="Graphic Design Project 1"></div>
-            <div class="work-item"><img src="cons.jpg" alt="Graphic Design Project 2"></div>
-            <div class="work-item"><img src="duke.jpg.jpg" alt="Advanced Photoshop Manipulation"></div>
-        </div>
-    </section>
+  <nav id="mainNav">
+    <a href="#about">About</a>
+    <a href="#portfolio">My Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact" class="btn-nav">Hire Me</a>
+  </nav>
 
-    <div id="imageModal" class="modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="imgTarget" alt="Lightbox View">
+  <div class="top-socials">
+    <a href="https://www.facebook.com/bijayandra.bishwokarma" target="_blank" rel="noopener" class="icon-fb" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/bijayandra_2/" target="_blank" rel="noopener" class="icon-insta" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bijayandra.x__" target="_blank" rel="noopener" class="icon-tt" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="eyebrow reveal-line"><span class="rec-dot"></span>Kathmandu Valley, Nepal</p>
+    <h1 class="reveal-line">
+      <span class="line">Hi, I'm <em>Bijayandra</em>.</span>
+    </h1>
+    <p class="hero-sub reveal-line">Nineteen, and I cut, design and manage the things other people scroll past in half a second — trying to make them stop for one more.</p>
+
+    <div class="hero-actions reveal-line">
+      <a href="#portfolio" class="btn-primary">
+        <span>View My Work</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+      <a href="tel:+9779840035249" class="btn-hero-icon icon-phone-hero" title="Call Me">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a href="mailto:bijayandra2@gmail.com" class="btn-hero-icon icon-gmail-hero" title="Email Me">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
+  </div>
 
-    <section id="skills" class="skills-section">
-        <div class="section-title">
-            <h2>Skills & Tools</h2>
-            <div class="underline"></div>
+  <div class="hero-image">
+    <div class="frame-corner tl"></div>
+    <div class="frame-corner br"></div>
+    <span class="frame-tag">00:00 / PROFILE</span>
+    <img src="profile.jpg" alt="Bijayandra Bishwokarma">
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="section-title reveal-up">
+    <span class="tc-label">00:01 — ABOUT</span>
+    <h2>Background &amp; Education</h2>
+  </div>
+  <div class="about-container">
+    <div class="bio reveal-up">
+      <p>I'm a creator and tech enthusiast based in Nepal. I specialise in turning creative concepts into polished visual designs, and in keeping the digital workflow behind them running cleanly — from raw footage to final export.</p>
+    </div>
+    <div class="education-grid">
+      <div class="edu-card reveal-up">
+        <span class="edu-mark">01</span>
+        <div>
+          <h3>DAV College, Lalitpur</h3>
+          <p class="duration">+2 Education</p>
         </div>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Creative Suite</h3>
-                <ul>
-                    <li>✨ Video Editing (Shorts, Reels, TikTok)</li>
-                    <li>🎨 Photoshop & Photo Restoration</li>
-                    <li>🖼️ Festive Poster Making</li>
-                    <li>📐 Graphic Layout Design</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Administrative & Tech</h3>
-                <ul>
-                    <li>⌨️ High-Speed Accuracy Typing</li>
-                    <li>📊 Data Management (Advanced Excel)</li>
-                    <li>📝 Document Processing (MS Word)</li>
-                </ul>
-            </div>
+      </div>
+      <div class="edu-card reveal-up">
+        <span class="edu-mark">02</span>
+        <div>
+          <h3>Nilkantha Secondary School</h3>
+          <p class="duration">Completed SLC</p>
         </div>
-    </section>
-
-    <!-- 5. Leave a Comment (Cusdis Live Integration) -->
-    <section id="contact" class="contact-section">
-        <div class="section-title">
-            <h2>Leave a Comment</h2>
-            <div class="underline"></div>
+      </div>
+      <div class="edu-card reveal-up">
+        <span class="edu-mark">03</span>
+        <div>
+          <h3>Children Park Secondary School</h3>
+          <p class="duration">Completed BLE</p>
         </div>
-        
-        <!-- Premium Box Container Wrapper for Cusdis Frame -->
-        <div class="comment-box-wrapper">
-            <div id="cusdis_thread"
-              data-host="https://cusdis.com"
-              data-app-id="3eb5d488-32ae-421f-889b-630625a8b1bf"
-              data-page-id="portfolio_homepage"
-              data-page-url="https://localhost.local"
-              data-page-title="Bijayandra Portfolio"
-              data-theme="dark">
-            </div>
-        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <footer>
-            <p class="copyright">&copy; 2026 Bijayandra Bishwokarma. All Rights Reserved.</p>
-        </footer>
-    </section>
+<section id="portfolio" class="portfolio-section">
+  <div class="section-title reveal-up">
+    <span class="tc-label">00:02 — WORK</span>
+    <h2>My Work</h2>
+  </div>
 
-    <!-- Script Implementations -->
-    <script async src="https://www.tiktok.com/embed.js"></script>
-    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-    <script>
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("imgTarget");
-        const closeModal = document.querySelector(".close-modal");
+  <div class="tiktok-container reveal-up">
+    <h3>Featured Video Content</h3>
+    <div class="tiktok-wrapper">
+      <blockquote class="tiktok-embed"
+                  cite="https://www.tiktok.com/@bijayandra.x__/video/7660802922829057288"
+                  data-video-id="7660802922829057288">
+        <section></section>
+      </blockquote>
+    </div>
+  </div>
 
-        document.querySelectorAll('.work-item img').forEach(image => {
-            image.addEventListener('click', () => {
-                modal.classList.add('active');
-                modalImg.src = image.src;
-            });
-        });
+  <h3 class="gallery-title reveal-up">Design &amp; Photo Projects</h3>
+  <div class="work-grid">
+    <div class="work-item reveal-up"><img src="hunterjpg.jpg" alt="Festive Poster Design 1"><span class="work-caption">Poster Design</span></div>
+    <div class="work-item reveal-up"><img src="book.jpg.png" alt="Festive Poster Design 2"><span class="work-caption">Poster Design</span></div>
+    <div class="work-item reveal-up"><img src="dashina.jpg" alt="Photoshop Photo Edit"><span class="work-caption">Photo Edit</span></div>
+    <div class="work-item reveal-up"><img src="gopal.jpg.jpg" alt="Graphic Design Project 1"><span class="work-caption">Graphic Design</span></div>
+    <div class="work-item reveal-up"><img src="cons.jpg" alt="Graphic Design Project 2"><span class="work-caption">Graphic Design</span></div>
+    <div class="work-item reveal-up"><img src="duke.jpg.jpg" alt="Advanced Photoshop Manipulation"><span class="work-caption">Photo Manipulation</span></div>
+  </div>
+</section>
 
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
+<div id="imageModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="imgTarget" alt="Lightbox View">
+</div>
 
-        modal.addEventListener('click', (e) => {
-            if (e.target !== modalImg && e.target !== closeModal) {
-                modal.classList.remove('active');
-            }
-        });
-    </script>
+<section id="skills" class="skills-section">
+  <div class="section-title reveal-up">
+    <span class="tc-label">00:03 — SKILLS</span>
+    <h2>Skills &amp; Tools</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category reveal-up">
+      <h3><i class="fas fa-film"></i> Creative Suite</h3>
+      <ul>
+        <li>Video Editing <span>Shorts, Reels, TikTok</span></li>
+        <li>Photoshop <span>&amp; Photo Restoration</span></li>
+        <li>Festive Poster Making <span>Design</span></li>
+        <li>Graphic Layout Design <span>Design</span></li>
+      </ul>
+    </div>
+    <div class="skill-category reveal-up">
+      <h3><i class="fas fa-keyboard"></i> Administrative &amp; Tech</h3>
+      <ul>
+        <li>High-Speed Accuracy Typing <span>Admin</span></li>
+        <li>Data Management <span>Advanced Excel</span></li>
+        <li>Document Processing <span>MS Word</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="section-title reveal-up">
+    <span class="tc-label">00:04 — CONTACT</span>
+    <h2>Leave a Comment</h2>
+  </div>
+
+  <div class="comment-box-wrapper reveal-up">
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="3eb5d488-32ae-421f-889b-630625a8b1bf"
+      data-page-id="portfolio_homepage"
+      data-page-url="https://localhost.local"
+      data-page-title="Bijayandra Portfolio"
+      data-theme="dark">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/bijayandra.bishwokarma" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/bijayandra_2/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bijayandra.x__" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p class="copyright">&copy; 2026 Bijayandra Bishwokarma. All Rights Reserved.</p>
+  </footer>
+</section>
+
+<script async src="https://www.tiktok.com/embed.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
